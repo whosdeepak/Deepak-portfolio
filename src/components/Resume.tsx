@@ -3,15 +3,15 @@ import { Download, FileText } from 'lucide-react';
 
 const Resume = () => {
   const handleDownload = () => {
-    // Replace with your actual resume file path
-    const resumeUrl = '/resume.pdf';
-    const link = document.createElement('a');
-    link.href = resumeUrl;
-    link.download = 'Deepak_Pandit_Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+  const resumeUrl = 'https://drive.google.com/uc?export=download&id=1-yP2Kn3PGAM2P6RqlMnc53VocuD7FaNE';
+  const link = document.createElement('a');
+  link.href = resumeUrl;
+  link.download = 'Deepak_Pandit_Resume.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
 
   const experience = [
     {
@@ -34,14 +34,21 @@ const Resume = () => {
     }
   ];
 
-  const education = [
-    {
-      degree: "Bachelor of Science in Computer Science",
-      school: "RD.&SH National College Bandra ",
-      period: "2022 - 2025",
-      description: "Focused on software engineering, data structures, and web technologies."
-    }
-  ];
+const education = [
+  {
+    degree: "Bachelor of Science in Computer Science",
+    school: "RD.&SH National College Bandra ",
+    period: "2022 - 2025",
+    description: "Focused on software engineering, data structures, and web technologies."
+  },
+  {
+    degree: "Master of Science in Data Science & Business Analytics",
+    school: "HSNC University, Mumbai",
+    period: "2025 - 2027",
+    description: "Specialized in data analysis, machine learning, and business intelligence tools for real-world applications."
+  }
+];
+
 
   return (
     <section id="resume" className="py-20 bg-white">

@@ -58,15 +58,20 @@ Every project I take on is an opportunity to learn, grow, and build something me
             </p>
             <p className="text-gray-600 leading-relaxed">
               I believe in the power of clean code, thoughtful design, and continuous learning. 
-              Whenyou I'm not coding, you can find me exploring new technologies, contributing to 
+              When I'm not coding, you can find me exploring new technologies, contributing to 
               open-source projects, or mentoring aspiring developers.
             </p>
           </div>
           
           <div className="relative">
-            <div className="w-full h-80 bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl flex items-center justify-center">
-              <div className="text-4xl font-bold text-blue-600"></div>
-            </div>
+ <div className="w-full h-80 rounded-2xl overflow-hidden shadow-lg">
+  <img
+    src="/IMG_4232.jpg"
+    alt="Profile"
+    className="w-full h-full object-cover"
+  />
+</div>
+
           </div>
         </div>
 

@@ -30,7 +30,7 @@ const Projects = () => {
     {
       title: "7sharads",
       description: "A responsive  website showcasing projects and skills with modern animations, smooth scrolling, and optimized performance.",
-      image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: "https://drive.google.com/file/d/1DiV9OdnSu3RJxmBFTn1QaLAES-lE6lsl/view?usp=drive_link",
       technologies: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
       liveUrl: "https://7shards.in/",
       githubUrl: "https://github.com/"
