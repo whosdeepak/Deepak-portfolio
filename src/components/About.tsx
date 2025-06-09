@@ -65,7 +65,7 @@ Every project I take on is an opportunity to learn, grow, and build something me
           
           <div className="relative">
             <div className="w-full h-80 bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl flex items-center justify-center">
-              <div className="text-4xl font-bold text-blue-600">Your Photo</div>
+              <div className="text-4xl font-bold text-blue-600"></div>
             </div>
           </div>
         </div>
