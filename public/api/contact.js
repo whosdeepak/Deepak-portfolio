@@ -10,7 +10,7 @@ export default async function handler(req, res) {
   const { name, email, message } = req.body;
 
   const transporter = nodemailer.createTransport({
-    host: 'sandbox.smtp.mailtrap.io',
+    host: 'sandbox.api.mailtrap.io',
     port: 2525,
     auth: {
       user: process.env.MAIL_USER,
