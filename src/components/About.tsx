@@ -58,7 +58,7 @@ Every project I take on is an opportunity to learn, grow, and build something me
             </p>
             <p className="text-gray-600 leading-relaxed">
               I believe in the power of clean code, thoughtful design, and continuous learning. 
-              When I'm not coding, you can find me exploring new technologies, contributing to 
+              Whenyou I'm not coding, you can find me exploring new technologies, contributing to 
               open-source projects, or mentoring aspiring developers.
             </p>
           </div>
