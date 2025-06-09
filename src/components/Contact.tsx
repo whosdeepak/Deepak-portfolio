@@ -24,16 +24,12 @@ const Contact = () => {
     setSubmitStatus('idle');
 
     try {
-      const response = await fetch('https://formsubmit.co/pandideepak197@gmail.com', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          ...formData,
-          _captcha: false,
-          _template: 'table'
-        }),
+        body: JSON.stringify(formData),
       });
 
       if (response.ok) {
@@ -51,7 +47,7 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      icon: <Mail className="text-blue-600\" size={24} />,
+      icon: <Mail className="text-blue-600" size={24} />,
       title: "Email",
       value: "pandideepak197@gmail.com",
       link: "mailto:pandideepak197@gmail.com"
@@ -63,7 +59,7 @@ const Contact = () => {
       link: "tel:+917021766128"
     },
     {
-      icon: <MapPin className="text-blue-600\" size={24} />,
+      icon: <MapPin className="text-blue-600" size={24} />,
       title: "Location",
       value: "Powai, Mumbai",
       link: "#"
