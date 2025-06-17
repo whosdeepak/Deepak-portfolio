@@ -28,11 +28,11 @@ const Projects = () => {
       githubUrl: "https://github.com/"
     },
     {
-      title: "7sharads",
+      title: "Live PowerBoard",
       description: "A responsive  website showcasing projects and skills with modern animations, smooth scrolling, and optimized performance.",
-      image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vecteezy.com%2Fvector-art%2F26760803-abstract-isolated-blue-image-of-a-number-seven-polygonal-illustration-looks-like-stars-in-the-blask-night-sky-in-spase-or-flying-glass-shards-digital-design-for-website-web-internet&psig=AOvVaw0vvrNMVQiQohLHZflq5jyw&ust=1749551965302000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPj8npKT5I0DFQAAAAAdAAAAABAE",
+      image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fthereportinghub.com%2Fpower-bi%2Fpower-bi-dashboards&psig=AOvVaw0yHsjBOUG01jLXTxnWQM7l&ust=1750227513908000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIjUpdzn940DFQAAAAAdAAAAABAE",
       technologies: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
-      liveUrl: "https://7shards.in/",
+      liveUrl: "https://live-pulse-dashboards-now.vercel.app/",
       githubUrl: "https://github.com/"
     }
   ];
