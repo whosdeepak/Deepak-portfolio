@@ -11,6 +11,7 @@ const Contact = () => {
     subject: '',
     message: ''
   });
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
@@ -38,7 +39,6 @@ const Contact = () => {
       setSubmitStatus('success');
       setFormData({ name: '', email: '', subject: '', message: '' });
     } catch (error) {
-      console.error('EmailJS error:', error);
       setSubmitStatus('error');
     }
 
@@ -70,9 +70,7 @@ const Contact = () => {
     <section id="contact" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Get In Touch
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             I'm always open to discussing new opportunities, interesting projects, or just having a friendly chat.
           </p>
@@ -92,10 +90,7 @@ const Contact = () => {
                   <div className="flex-shrink-0">{info.icon}</div>
                   <div>
                     <h4 className="font-medium text-gray-900">{info.title}</h4>
-                    <a
-                      href={info.link}
-                      className="text-gray-600 hover:text-blue-600 transition-colors duration-200"
-                    >
+                    <a href={info.link} className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
                       {info.value}
                     </a>
                   </div>
@@ -108,9 +103,7 @@ const Contact = () => {
             <form ref={form} onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                    Your Name
-                  </label>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">Your Name</label>
                   <input
                     type="text"
                     id="name"
@@ -123,9 +116,7 @@ const Contact = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email Address
-                  </label>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
                   <input
                     type="email"
                     id="email"
@@ -140,9 +131,7 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                  Subject
-                </label>
+                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">Subject</label>
                 <input
                   type="text"
                   id="subject"
@@ -156,9 +145,7 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                  Message
-                </label>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">Message</label>
                 <textarea
                   id="message"
                   name="message"
