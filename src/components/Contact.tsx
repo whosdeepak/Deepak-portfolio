@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from 'emailjs-com';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
 const Contact = () => {
+  const form = useRef<HTMLFormElement>(null);
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -23,26 +26,19 @@ const Contact = () => {
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
-    try {
-      const response = await fetch('https://formsubmit.co/pandideepak197@gmail.com', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          ...formData,
-          _captcha: false,
-          _template: 'table'
-        }),
-      });
+    if (!form.current) return;
 
-      if (response.ok) {
-        setSubmitStatus('success');
-        setFormData({ name: '', email: '', subject: '', message: '' });
-      } else {
-        setSubmitStatus('error');
-      }
+    try {
+      await emailjs.sendForm(
+        'service_8p1icfs',
+        'template_9ptbmil',
+        form.current,
+        'CX_OvekmICLYgv8CH'
+      );
+      setSubmitStatus('success');
+      setFormData({ name: '', email: '', subject: '', message: '' });
     } catch (error) {
+      console.error('EmailJS error:', error);
       setSubmitStatus('error');
     }
 
@@ -51,7 +47,7 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      icon: <Mail className="text-blue-600\" size={24} />,
+      icon: <Mail className="text-blue-600" size={24} />,
       title: "Email",
       value: "pandideepak197@gmail.com",
       link: "mailto:pandideepak197@gmail.com"
@@ -63,7 +59,7 @@ const Contact = () => {
       link: "tel:+917021766128"
     },
     {
-      icon: <MapPin className="text-blue-600\" size={24} />,
+      icon: <MapPin className="text-blue-600" size={24} />,
       title: "Location",
       value: "Powai, Mumbai",
       link: "#"
@@ -109,7 +105,7 @@ const Contact = () => {
           </div>
 
           <div className="bg-white p-8 rounded-xl shadow-lg">
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form ref={form} onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -198,7 +194,7 @@ const Contact = () => {
 
               {submitStatus === 'error' && (
                 <div className="text-red-600 text-center font-medium">
-                  Sorry, there was an error sending your message. Please try again.
+                   Sorry, something went wrong. Please try again later.
                 </div>
               )}
             </form>
@@ -208,3 +204,5 @@ const Contact = () => {
     </section>
   );
 };
+
+export default Contact;
