@@ -30,11 +30,12 @@ const Contact = () => {
     if (!form.current) return;
 
     try {
+      console.log("Sending form data:", formData); // optional debug
       await emailjs.sendForm(
-        'service_8p1icfs',
-        'template_9ptbmil',
+        'service_5judqrn',          // ✅ Your Service ID
+        'template_n37z55f',         // ✅ Your Template ID
         form.current,
-        'CX_OvekmICLYgv8CH'
+        'BR0L7JmseCfPErM5Q'         // ✅ Your Public Key
       );
       setSubmitStatus('success');
       setFormData({ name: '', email: '', subject: '', message: '' });
@@ -176,13 +177,13 @@ const Contact = () => {
 
               {submitStatus === 'success' && (
                 <div className="text-green-600 text-center font-medium">
-                   Thank you! Your message has been sent successfully.
+                   ✅ Thank you! Your message has been sent successfully.
                 </div>
               )}
 
               {submitStatus === 'error' && (
                 <div className="text-red-600 text-center font-medium">
-                   Sorry, something went wrong. Please try again later.
+                   ❌ Sorry, something went wrong. Please try again later.
                 </div>
               )}
             </form>
