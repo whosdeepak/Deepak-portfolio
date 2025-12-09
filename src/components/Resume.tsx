@@ -3,7 +3,7 @@ import { Download, FileText } from 'lucide-react';
 
 const Resume = () => {
   const handleDownload = () => {
-  const resumeUrl = 'https://drive.google.com/uc?export=download&id=1-yP2Kn3PGAM2P6RqlMnc53VocuD7FaNE';
+  const resumeUrl = 'https://drive.google.com/file/d/1ohzXscLTDPwSwHLLmqPA6i679AnA3Gvr/view?usp=drive_link';
   const link = document.createElement('a');
   link.href = resumeUrl;
   link.download = 'Deepak_Pandit_Resume.pdf';
