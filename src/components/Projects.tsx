@@ -32,7 +32,7 @@ const Projects = () => {
       description: "A responsive  website showcasing projects and skills with modern animations, smooth scrolling, and optimized performance.",
       image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fthereportinghub.com%2Fpower-bi%2Fpower-bi-dashboards&psig=AOvVaw0yHsjBOUG01jLXTxnWQM7l&ust=1750227513908000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIjUpdzn940DFQAAAAAdAAAAABAE",
       technologies: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
-      liveUrl: "https://live-pulse-dashboards-now.vercel.app/",
+      liveUrl: "https://voluble-peony-1645c7.netlify.app/dashboard",
       githubUrl: "https://github.com/"
     }
   ];
