@@ -1,10 +1,7 @@
 import React, { useState, useRef } from 'react';
-import emailjs from 'emailjs-com';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
 const Contact = () => {
-  const form = useRef<HTMLFormElement>(null);
-
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -22,28 +19,10 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = (e: React.FormEvent) => {
     setIsSubmitting(true);
     setSubmitStatus('idle');
-
-    if (!form.current) return;
-
-    try {
-      await emailjs.sendForm(
-        'service_8p1icfs',
-        'template_9ptbmil',
-        form.current,
-        'CX_OvekmICLYgv8CH'
-      );
-      setSubmitStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    } catch (error) {
-      console.error('EmailJS error:', error);
-      setSubmitStatus('error');
-    }
-
-    setIsSubmitting(false);
+    // FormSubmit will handle the form submission
   };
 
   const contactInfo = [
@@ -101,7 +80,16 @@ const Contact = () => {
           </div>
 
           <div className="bg-white p-8 rounded-xl shadow-lg">
-            <form ref={form} onSubmit={handleSubmit} className="space-y-6">
+            <form 
+              action="https://formsubmit.co/pandideepak197@gmail.com" 
+              method="POST"
+              onSubmit={handleSubmit} 
+              className="space-y-6"
+            >
+              <input type="hidden" name="_subject" value="New Portfolio Contact Form Submission" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
+              
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">Your Name</label>
